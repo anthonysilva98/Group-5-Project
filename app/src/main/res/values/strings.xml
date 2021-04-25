@@ -19,4 +19,36 @@
     <string name = "divide">÷</string>>
     <string name = "equals">=</string>>
     <string name = "decimal">.</string>>
+
+    <string name = "exponent">^</string>
+    <string name = "parentheses">( )</string>
+
+    <string name = "plusMinus">+/-</string>
+    <string name = "point">.</string>
+
+    <string name = "modulo">%</string>
+    <string name = "square">√</string>
+
+    <string name = "sin">sin</string>
+    <string name = "cos">cos</string>
+    <string name = "tan">tan</string>
+    <string name = "secant">sec</string>
+    <string name = "cosecant">csc</string>
+    <string name = "cotangent">cot</string>
+
+
+    <string name = "log">log</string>
+    <string name = "pi">π</string>
+
+    <string name = "mode">mode</string>
+
+    <string name = "e">e</string>
+
+    <string name = "backspace"> </string>
+
+    <string name = "display">Enter in a value</string>
+    <string name = "base">base</string>
+    <string name = "history">hist</string>
+    <string name = "second">2nd</string>
+
 </resources>
