@@ -50,5 +50,6 @@
     <string name = "base">base</string>
     <string name = "history">hist</string>
     <string name = "second">2nd</string>
+    <string name = "answerBox">Enter a value</string>
 
 </resources>
