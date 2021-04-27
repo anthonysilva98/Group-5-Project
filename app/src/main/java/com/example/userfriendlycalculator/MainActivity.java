@@ -1,19 +1,23 @@
 package com.example.userfriendlycalculator;
-
+//Author:Anthony
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     private EditText output;
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         output = findViewById(R.id.outputBox);
-
+        output.setShowSoftInputOnFocus(false);
         output.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         String firstHalf = pastString.substring(0, cursorPosition);
         String secondHalf = pastString.substring(cursorPosition);
         output.setText(String.format("%s%s%s", firstHalf, stringToAdd, secondHalf));
+        output.setSelection(cursorPosition + 1);
 
     }
     public void zerobutton(View view){
@@ -61,4 +66,40 @@ public class MainActivity extends AppCompatActivity {
     public void ninebutton(View view){
         updateText("9");
     }
+    public void plusbutton(View view){
+        updateText("+");
+    }
+    public void minusbutton(View view){
+        updateText("-");
+    }
+    public void multiplybutton(View view){
+        updateText("×");
+    }
+    public void dividebutton(View view){
+        updateText("÷");
+    }
+    public void decimalbutton(View view){
+        updateText(".");
+    }
+    public void exponentbutton(View view){
+        updateText("^");
+    }
+    public void backspacebutton(View view){
+        int cursorPosition = output.getSelectionStart();
+        int textLength = output.getText().length();
+        if(cursorPosition != 0 && textLength != 0){
+            SpannableStringBuilder selection = (SpannableStringBuilder) output.getText();
+            selection.replace(cursorPosition - 1, cursorPosition, "");
+            output.setText(selection);
+            output.setSelection(cursorPosition - 1);
+        }
+    }
+    public void plusminusbutton(View view){
+        updateText("-");
+    }
+
+    public void clearbutton(View view){
+        output.setText("");
+    }
+
 }

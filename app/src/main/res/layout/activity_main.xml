@@ -44,6 +44,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="exponentbutton"
                 android:text="@string/exponent" />
 
             <Button
@@ -52,6 +53,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="dividebutton"
                 android:text="@string/divide" />
         </TableRow>
 
@@ -93,6 +95,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="multiplybutton"
                 android:text="@string/multiply" />
         </TableRow>
 
@@ -133,6 +136,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="minusbutton"
                 android:text="@string/subtract" />
         </TableRow>
 
@@ -172,6 +176,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="plusbutton"
                 android:text="@string/add" />
         </TableRow>
 
@@ -202,6 +207,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="decimalbutton"
                 android:text="@string/decimal" />
 
             <Button
@@ -214,6 +220,18 @@
 
         </TableRow>
     </TableLayout>
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:id="@+id/clearbutton"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:onClick="clearbutton"
+        android:text="@string/clear"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/outputBox"

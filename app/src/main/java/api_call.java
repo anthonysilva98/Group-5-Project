@@ -2,7 +2,7 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-
+//author:Kristijan
 public class api_call {
 
     private static HttpURLConnection connection;
