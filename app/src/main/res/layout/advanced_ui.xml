@@ -49,6 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="clearbutton"
                 android:text="@string/clear" />
         </TableRow>
 
@@ -148,6 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="dividebutton"
                 android:text="@string/divide" />
         </TableRow>
 
@@ -184,6 +186,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="multiplybutton"
                 android:text="@string/multiply" />
         </TableRow>
 
@@ -220,6 +223,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="minusbutton"
                 android:text="@string/subtract" />
         </TableRow>
 
@@ -257,6 +261,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="plusbutton"
                 android:text="@string/add" />
         </TableRow>
 
@@ -276,6 +281,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="zerobutton"
                 android:text="@string/zero" />
 
             <Button
@@ -311,6 +317,7 @@
         android:id="@+id/button36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="backspacebutton"
         android:text="@string/backspace"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
