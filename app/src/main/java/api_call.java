@@ -3,6 +3,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 //author:Kristijan
+//source: https://www.youtube.com/watch?v=qzRKa8I36Ww
 public class api_call {
 
     private static HttpURLConnection connection;
