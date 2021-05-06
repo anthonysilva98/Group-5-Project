@@ -2,6 +2,7 @@ package com.example.userfriendlycalculator;
 //Author:Anthony
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import org.mariuszgromada.math.mxparser.*;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -100,6 +101,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void clearbutton(View view){
         output.setText("");
-    }
 
+    }
+    public void regularEqualbutton(View view){
+        String userInput = output.getText().toString();
+        userInput = userInput.replaceAll("÷", "/");
+        userInput = userInput.replaceAll("×", "*");
+
+        Expression exp = new Expression(userInput);
+
+        String result = String.valueOf(exp.calculate());
+        output.setText(result);
+        output.setSelection(result.length());
+    }
 }
