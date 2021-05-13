@@ -1,3 +1,5 @@
+package com.example.userfriendlycalculator;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -5,14 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.userfriendlycalculator.MainActivity;
-import com.example.userfriendlycalculator.R;
-
 public class launch_Screen extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.launch_screen);
         Button simpleBtn = (Button) findViewById(R.id.simpleBtn);
         Button complexBtn = (Button) findViewById(R.id.complexBtn);
 
