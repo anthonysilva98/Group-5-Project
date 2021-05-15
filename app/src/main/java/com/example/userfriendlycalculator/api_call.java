@@ -19,7 +19,7 @@ public class api_call {
         BufferedReader reader;
         String line = "";
         StringBuffer responseContent = new StringBuffer();
-
+        String userInput = "";
         try {
             URL myurl = new URL("http://api.wolframalpha.com/v1/result?appid=XL554J-39UTLQWJTV&i=sin(pi)");
             connection = (HttpURLConnection) myurl.openConnection();
