@@ -10,13 +10,13 @@ import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class AdvancedActivity extends AppCompatActivity {
     private EditText output;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.advanced_ui);
         output = findViewById(R.id.outputBox);
         output.setShowSoftInputOnFocus(false);
         output.setOnClickListener(new View.OnClickListener() {
@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void zerobutton(View view){
-                updateText("0");
-                }
+        updateText("0");
+    }
     public void onebutton(View view){
         updateText("1");
     }
