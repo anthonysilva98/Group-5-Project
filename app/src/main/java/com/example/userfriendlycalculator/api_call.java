@@ -8,6 +8,7 @@ import java.net.URL;
 //source: https://www.youtube.com/watch?v=qzRKa8I36Ww
 public class api_call {
 
+    public String result;
     AdvancedActivity advanced = new AdvancedActivity();
     private static HttpURLConnection connection;
     public static void main (String[] args){
