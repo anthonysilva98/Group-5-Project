@@ -10,20 +10,22 @@
         android:id="@+id/simpleBtn"
         android:layout_width="163dp"
         android:layout_height="103dp"
-        android:layout_marginTop="228dp"
         android:text="Simple Calculator"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.297" />
 
     <Button
         android:id="@+id/complexBtn"
         android:layout_width="157dp"
         android:layout_height="106dp"
-        android:layout_marginBottom="240dp"
         android:text="Complex Calculator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.699" />
 </androidx.constraintlayout.widget.ConstraintLayout>
