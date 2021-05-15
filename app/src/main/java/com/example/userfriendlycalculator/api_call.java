@@ -1,3 +1,5 @@
+package com.example.userfriendlycalculator;
+
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;

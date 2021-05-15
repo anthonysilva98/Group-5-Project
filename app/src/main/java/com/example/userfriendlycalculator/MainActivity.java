@@ -10,7 +10,11 @@ import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.widget.EditText;
 
+
 public class MainActivity extends AppCompatActivity {
+
+    api_call wolframCall = new api_call();
+
     private EditText output;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
