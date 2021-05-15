@@ -26,7 +26,7 @@ public class api_call {
             connection.setReadTimeout(5000);
 
             int status = connection.getResponseCode();
-            System.out.println(status);
+            //System.out.println(status);
 
             if(status>299){
                 reader = new BufferedReader (new InputStreamReader(connection.getErrorStream()));
