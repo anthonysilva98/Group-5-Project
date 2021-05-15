@@ -13,8 +13,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    api_call myObject = new api_call();
-
+    api_call wolframCall = new api_call();
 
     private EditText output;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
