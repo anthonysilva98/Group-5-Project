@@ -1,5 +1,5 @@
 package com.example.userfriendlycalculator;
-//Author:Anthony
+//Author:Shane
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import org.mariuszgromada.math.mxparser.*;
@@ -104,10 +104,12 @@ public class AdvancedActivity extends AppCompatActivity {
         output.setText("");
 
     }
-    public void regularEqualbutton(View view){
+    public void advancedEqualButton(View view){
         String userInput = output.getText().toString();
-        userInput = userInput.replaceAll("÷", "/");
-        userInput = userInput.replaceAll("×", "*");
+        userInput = userInput.replaceAll("//+", "plus");
+        userInput = userInput.replaceAll("//-", "minus");
+        userInput = userInput.replaceAll("÷", "divide");
+        userInput = userInput.replaceAll("×", "multiply");
 
         Expression exp = new Expression(userInput);
 
