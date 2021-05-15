@@ -6,8 +6,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 //author:Kristijan
 //source: https://www.youtube.com/watch?v=qzRKa8I36Ww
-public class api_call {
 
+
+public class api_call {
+    public String userInput = "http://api.wolframalpha.com/v1/result?appid=XL554J-39UTLQWJTV&i=";
     public String result;
     AdvancedActivity advanced = new AdvancedActivity();
     private static HttpURLConnection connection;
@@ -19,7 +21,7 @@ public class api_call {
         BufferedReader reader;
         String line = "";
         StringBuffer responseContent = new StringBuffer();
-        String userInput = "";
+
         try {
             URL myurl = new URL("http://api.wolframalpha.com/v1/result?appid=XL554J-39UTLQWJTV&i=sin(pi)");
             connection = (HttpURLConnection) myurl.openConnection();
