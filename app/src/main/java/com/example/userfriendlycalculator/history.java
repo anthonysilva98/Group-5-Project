@@ -1,5 +1,4 @@
 package com.example.userfriendlycalculator;
-import java.io.*;
 import java.util.*;
 //by Edgar
 
@@ -13,10 +12,15 @@ public class history extends MainActivity {
 
     //i want this to pop into a result screen, but I don't know how to do that
     //maybe create an array of exactly the size of the stack? probably redundant
-    public void readResult() {
-        while(!stack.isEmpty()) {
-            stack.pop();
+    public int[] readResult() {
+        int count = stack.size();
+        int[] array = new int[count];
+
+        for(int i = 0; i < count; i++){
+            array[i] = stack.pop();
         }
+
+        return array;
     }
 
 }
