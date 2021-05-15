@@ -1,16 +1,17 @@
 package com.example.userfriendlycalculator;
 //Author:Shane
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import org.mariuszgromada.math.mxparser.*;
-
 import android.os.Build;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.widget.EditText;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+
+
 public class AdvancedActivity extends AppCompatActivity {
+    api_call wolframCall = new api_call();
     private EditText output;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -110,7 +111,7 @@ public class AdvancedActivity extends AppCompatActivity {
         userInput = userInput.replaceAll("//-", "minus");
         userInput = userInput.replaceAll("÷", "divide");
         userInput = userInput.replaceAll("×", "multiply");
-        api_call wolframCall = new api_call();
+
 
 //       Expression exp = new Expression(userInput);
 //
