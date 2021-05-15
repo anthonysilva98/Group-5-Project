@@ -110,11 +110,12 @@ public class AdvancedActivity extends AppCompatActivity {
         userInput = userInput.replaceAll("//-", "minus");
         userInput = userInput.replaceAll("÷", "divide");
         userInput = userInput.replaceAll("×", "multiply");
+        api_call wolframCall = new api_call();
 
-        Expression exp = new Expression(userInput);
-
-        String result = String.valueOf(exp.calculate());
-        output.setText(result);
-        output.setSelection(result.length());
+//       Expression exp = new Expression(userInput);
+//
+//       String result = String.valueOf(exp.calculate());
+//       output.setText(result);
+//       output.setSelection(result.length());
     }
 }
