@@ -45,6 +45,8 @@ public class api_call {
 
 
             System.out.println(responseContent.toString());
+            String result = "";
+            result = responseContent.toString();
         } catch(MalformedURLException exception){
             exception.printStackTrace();
         } catch(IOException exception2){
