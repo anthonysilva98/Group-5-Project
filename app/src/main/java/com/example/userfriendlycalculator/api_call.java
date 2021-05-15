@@ -8,6 +8,7 @@ import java.net.URL;
 //source: https://www.youtube.com/watch?v=qzRKa8I36Ww
 public class api_call {
 
+    AdvancedActivity advanced = new AdvancedActivity();
     private static HttpURLConnection connection;
     public static void main (String[] args){
         //int a = 3;
@@ -26,7 +27,7 @@ public class api_call {
             connection.setReadTimeout(5000);
 
             int status = connection.getResponseCode();
-            System.out.println(status);
+            //System.out.println(status);
 
             if(status>299){
                 reader = new BufferedReader (new InputStreamReader(connection.getErrorStream()));
