@@ -9,21 +9,21 @@ import java.net.URL;
 
 
 public class api_call {
-    public String userInput = "";
-    public String result;
+    public static String userInput = "";
+
     AdvancedActivity advanced = new AdvancedActivity();
     private static HttpURLConnection connection;
     public static void main (String[] args){
         //int a = 3;
         //System.out.println("hello world");
         //System.out.print(a);
-
+        String result = "";
         BufferedReader reader;
         String line = "";
         StringBuffer responseContent = new StringBuffer();
 
         try {
-            URL myurl = new URL("http://api.wolframalpha.com/v1/result?appid=XL554J-39UTLQWJTV&i=sin(pi)");
+            URL myurl = new URL("http://api.wolframalpha.com/v1/result?appid=XL554J-39UTLQWJTV&i=" + userInput);
             connection = (HttpURLConnection) myurl.openConnection();
             connection.setRequestMethod("GET");
             connection.setConnectTimeout(5000);
@@ -47,7 +47,9 @@ public class api_call {
             }
 
 
-            System.out.println(responseContent.toString());
+            //System.out.println(responseContent.toString());
+            result = responseContent.toString();
+            System.out.println(result);
 
         } catch(MalformedURLException exception){
             exception.printStackTrace();
@@ -56,7 +58,6 @@ public class api_call {
         } finally {
             connection.disconnect();
         }
-        String result = "";
-        result = responseContent.toString();
     }
+
 }
