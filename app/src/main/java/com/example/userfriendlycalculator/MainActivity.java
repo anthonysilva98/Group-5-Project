@@ -104,6 +104,28 @@ public class MainActivity extends AppCompatActivity {
         updateText("-");
     }
 
+    public void ParenthesisButton(View view){
+
+        int cursorPosition = output.getSelectionStart();
+        int openParenthesis = 0;
+        int closeParenthesis = 0;
+        int textLen = output.getText().length();
+        for(int i = 0;i < cursorPosition; i++){
+            if (output.getText().toString().substring(i, i + 1).equals("(")){
+                openParenthesis += 1;
+            }
+            if (output.getText().toString().substring(i, i + 1).equals("(")){
+                closeParenthesis += 1;
+            }
+            if(openParenthesis == closeParenthesis || output.getText().toString().substring(textLen -1, textLen).equals(openParenthesis)){
+                updateText("(");
+            }
+            if(closeParenthesis < closeParenthesis || output.getText().toString().substring(textLen -1,textLen).equals(openParenthesis)){
+                updateText(")");
+            }
+            output.setSelection(cursorPosition + 1);
+        }
+    }
     public void clearbutton(View view){
         output.setText("");
 

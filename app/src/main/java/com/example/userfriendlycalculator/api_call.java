@@ -9,7 +9,7 @@ import java.net.URL;
 
 
 public class api_call {
-    public String userInput = "http://api.wolframalpha.com/v1/result?appid=XL554J-39UTLQWJTV&i=";
+    public String userInput = "";
     public String result;
     AdvancedActivity advanced = new AdvancedActivity();
     private static HttpURLConnection connection;
