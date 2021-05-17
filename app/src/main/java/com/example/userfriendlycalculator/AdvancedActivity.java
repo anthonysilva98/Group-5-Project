@@ -87,6 +87,26 @@ public class AdvancedActivity extends AppCompatActivity {
     public void exponentbutton(View view){
         updateText("^");
     }
+
+    public void sinbutton(View view){
+        updateText("sin");
+    }
+    public void cosbutton(View view){
+        updateText("cos");
+    }
+    public void tanbutton(View view){
+        updateText("tan");
+    }
+    public void pibutton(View view){
+        updateText("pi");
+    }
+    public void ebutton(View view){
+        updateText("e");
+    }
+    public void logbutton(View view){
+        updateText("log");
+    }
+    public void rootbutton(View view){ updateText("root"); }
     public void backspacebutton(View view){
         int cursorPosition = output.getSelectionStart();
         int textLength = output.getText().length();
@@ -119,5 +139,27 @@ public class AdvancedActivity extends AppCompatActivity {
 //       String result = String.valueOf(exp.calculate());
 //       output.setText(result);
 //       output.setSelection(result.length());
+    }
+    public void ParenthesisButton(View view){
+
+        int cursorPosition = output.getSelectionStart();
+        int openParenthesis = 0;
+        int closeParenthesis = 0;
+        int textLen = output.getText().length();
+        for(int i = 0;i < cursorPosition; i++){
+            if (output.getText().toString().substring(i, i + 1).equals("(")){
+                openParenthesis += 1;
+            }
+            if (output.getText().toString().substring(i, i + 1).equals("(")){
+                closeParenthesis += 1;
+            }
+            if(openParenthesis == closeParenthesis || output.getText().toString().substring(textLen -1, textLen).equals(openParenthesis)){
+                updateText("(");
+            }
+            if(closeParenthesis < closeParenthesis || output.getText().toString().substring(textLen -1,textLen).equals(openParenthesis)){
+                updateText(")");
+            }
+            output.setSelection(cursorPosition + 1);
+        }
     }
 }

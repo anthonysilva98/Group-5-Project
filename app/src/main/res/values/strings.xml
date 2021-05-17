@@ -47,7 +47,7 @@
     <string name = "backspace"> </string>
 
     <string name = "display">Enter in a value</string>
-    <string name = "base">base</string>
+    <string name = "naturalLog">LN</string>
     <string name = "history">hist</string>
     <string name = "second">2nd</string>
     <string name = "answerBox">Enter a value</string>

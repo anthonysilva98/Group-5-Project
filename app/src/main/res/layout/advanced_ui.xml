@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/base" />
+                android:text="@string/naturalLog" />
 
             <Button
                 android:id="@+id/clearbutton"
@@ -50,7 +50,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="clearbutton"
-                android:text="@string/clear" />
+                android:text="@string/clear"
+                app:backgroundTint="#FA4343" />
         </TableRow>
 
         <TableRow
@@ -62,6 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="sinbutton"
                 android:text="@string/sin" />
 
             <Button
@@ -69,6 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="cosbutton"
                 android:text="@string/cos" />
 
             <Button
@@ -76,14 +79,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="tanbutton"
                 android:text="@string/tan" />
 
             <Button
-                android:id="@+id/button26"
+                android:id="@+id/buttonBackspace"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/second" />
+                android:onClick="backspacebutton"
+                android:text="@string/backspace" />
         </TableRow>
 
         <TableRow
@@ -95,6 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="pibutton"
                 android:text="@string/pi" />
 
             <Button
@@ -102,6 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="ebutton"
                 android:text="@string/e" />
 
             <Button
@@ -109,6 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="logbutton"
                 android:text="@string/log" />
 
             <Button
@@ -116,6 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="rootbutton"
                 android:text="@string/square" />
         </TableRow>
 
@@ -135,6 +144,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="ParenthesisButton"
                 android:text="@string/parentheses" />
 
             <Button
@@ -314,14 +324,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="backspacebutton"
-        android:text="@string/backspace"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.91"
-        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
