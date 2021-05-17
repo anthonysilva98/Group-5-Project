@@ -132,7 +132,7 @@ public class AdvancedActivity extends AppCompatActivity {
         userInput = userInput.replaceAll("÷", "divide");
         userInput = userInput.replaceAll("×", "multiply");
         wolframCall.userInput = userInput;
-
+        output.setText(wolframCall.result);
 
 //       Expression exp = new Expression(userInput);
 //

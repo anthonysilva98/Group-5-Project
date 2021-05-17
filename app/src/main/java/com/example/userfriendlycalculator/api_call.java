@@ -10,14 +10,14 @@ import java.net.URL;
 
 public class api_call {
     public static String userInput = "";
-
+    public static String result = "";
     AdvancedActivity advanced = new AdvancedActivity();
     private static HttpURLConnection connection;
     public static void main (String[] args){
         //int a = 3;
         //System.out.println("hello world");
         //System.out.print(a);
-        String result = "";
+        //String result = "";
         BufferedReader reader;
         String line = "";
         StringBuffer responseContent = new StringBuffer();
