@@ -14,7 +14,6 @@ public class api_call {
 
     public static String result = "";
 
-
     private static HttpURLConnection connection;
     public static void main (String[] args){
 
@@ -24,7 +23,7 @@ public class api_call {
         BufferedReader reader;
         String line = "";
         StringBuffer responseContent = new StringBuffer();
-//"http://api.wolframalpha.com/v1/result?appid=XL554J-39UTLQWJTV&i="
+
         try {
             URL myurl = new URL("http://api.wolframalpha.com/v1/result?appid=XL554J-39UTLQWJTV&i=" + input);
             connection = (HttpURLConnection) myurl.openConnection();
@@ -50,9 +49,6 @@ public class api_call {
             }
 
 
-            //System.out.println(responseContent.toString());
-
-
         } catch(MalformedURLException exception){
             exception.printStackTrace();
         } catch(IOException exception2){
@@ -63,10 +59,6 @@ public class api_call {
         result = responseContent.toString();
         return(result);
 
-
     }
-
-
-
 
 }

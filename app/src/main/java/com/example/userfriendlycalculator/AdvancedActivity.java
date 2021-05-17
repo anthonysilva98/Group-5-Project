@@ -9,7 +9,6 @@ import android.widget.EditText;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-
 public class AdvancedActivity extends AppCompatActivity {
     api_call wolframCall = new api_call();
     private EditText output;
