@@ -13,7 +13,7 @@ import java.net.URL;
 public class api_call {
 
     public static String result = "";
-    AdvancedActivity advanced = new AdvancedActivity();
+
 
     private static HttpURLConnection connection;
     public static void main (String[] args){
