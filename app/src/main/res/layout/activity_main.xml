@@ -249,4 +249,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/buttonhistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:onClick="historybutton"
+        android:text="@string/history"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/clearbutton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
