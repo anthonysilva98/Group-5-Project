@@ -73,8 +73,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="backspacebutton"
-                android:text="LN" />
+                android:onClick="naturallogbuttton"
+                android:text="@string/naturalLog" />
         </TableRow>
 
         <TableRow

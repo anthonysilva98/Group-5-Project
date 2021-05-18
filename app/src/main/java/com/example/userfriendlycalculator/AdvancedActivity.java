@@ -105,6 +105,9 @@ public class AdvancedActivity extends AppCompatActivity {
     public void logbutton(View view){
         updateText("log");
     }
+    public void naturallogbuttton(View view){
+        updateText("ln");
+    }
     public void rootbutton(View view){ updateText("root"); }
     public void backspacebutton(View view){
         int cursorPosition = output.getSelectionStart();
