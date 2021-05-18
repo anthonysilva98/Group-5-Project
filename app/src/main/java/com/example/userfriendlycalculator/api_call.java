@@ -12,20 +12,24 @@ import java.net.URL;
 
 public class api_call {
 
-    public static String result = "";
 
-    private static HttpURLConnection connection;
     public static void main (String[] args){
+        System.out.println(returnResult("9 + 8"));
 
     }
 
     public static String returnResult (String input){
+        String result = "";
+
+        input = input.replaceAll("\\s", "");
+
+        HttpURLConnection connection = null;
         BufferedReader reader;
         String line = "";
         StringBuffer responseContent = new StringBuffer();
-
+        String url = "http://api.wolframalpha.com/v1/result?appid=XL554J-39UTLQWJTV&i=" + input;
         try {
-            URL myurl = new URL("http://api.wolframalpha.com/v1/result?appid=XL554J-39UTLQWJTV&i=" + input);
+            URL myurl = new URL(url);
             connection = (HttpURLConnection) myurl.openConnection();
             connection.setRequestMethod("GET");
             connection.setConnectTimeout(5000);
