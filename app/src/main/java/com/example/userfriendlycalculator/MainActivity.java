@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import org.mariuszgromada.math.mxparser.*;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
@@ -114,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
             if (output.getText().toString().substring(i, i + 1).equals("(")){
                 openParenthesis += 1;
             }
-            if (output.getText().toString().substring(i, i + 1).equals("(")){
+            if (output.getText().toString().substring(i, i + 1).equals(")")){
                 closeParenthesis += 1;
             }
             if(openParenthesis == closeParenthesis || output.getText().toString().substring(textLen -1, textLen).equals(openParenthesis)){
@@ -140,5 +141,9 @@ public class MainActivity extends AppCompatActivity {
         String result = String.valueOf(exp.calculate());
         output.setText(result);
         output.setSelection(result.length());
+    }
+
+    public void historybutton(View view) {
+        startActivity(new Intent(MainActivity.this, history.class));
     }
 }
