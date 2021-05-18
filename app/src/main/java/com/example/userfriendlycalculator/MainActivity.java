@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
             if (output.getText().toString().substring(i, i + 1).equals("(")){
                 openParenthesis += 1;
             }
-            if (output.getText().toString().substring(i, i + 1).equals("(")){
+            if (output.getText().toString().substring(i, i + 1).equals(")")){
                 closeParenthesis += 1;
             }
             if(openParenthesis == closeParenthesis || output.getText().toString().substring(textLen -1, textLen).equals(openParenthesis)){

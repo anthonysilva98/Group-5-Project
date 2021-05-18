@@ -27,7 +27,7 @@ public class launch_Screen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //complex button functionality
-                startActivity(new Intent (launch_Screen.this, AdvancedActivity.class ));
+                startActivity(new Intent(launch_Screen.this, AdvancedActivity.class));
 
             }
 
