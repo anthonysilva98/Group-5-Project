@@ -24,25 +24,11 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/buttonmmode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="" />
-
-            <Button
                 android:id="@+id/buttonhistory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/history" />
-
-            <Button
-                android:id="@+id/buttonbase"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/naturalLog" />
 
             <Button
                 android:id="@+id/clearbutton"
@@ -83,12 +69,12 @@
                 android:text="@string/tan" />
 
             <Button
-                android:id="@+id/buttonBackspace"
+                android:id="@+id/buttonnaturallog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="backspacebutton"
-                android:text="" />
+                android:text="LN" />
         </TableRow>
 
         <TableRow
