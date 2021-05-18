@@ -22,7 +22,7 @@ public class api_call {
         String result = "";
 
         input = input.replaceAll("\\s", "");
-
+        input = "cos(0)";
         HttpURLConnection connection = null;
         BufferedReader reader;
         String line = "";
@@ -61,6 +61,7 @@ public class api_call {
             connection.disconnect();
         }
         result = responseContent.toString();
+        System.out.println(result);
         return(result);
 
     }
