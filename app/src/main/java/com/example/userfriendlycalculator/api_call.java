@@ -10,7 +10,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 //source: https://www.youtube.com/watch?v=qzRKa8I36Ww
 
-
+//Enables the connection with external API (Wolfram Alpha)
 public class api_call {
 
 
@@ -19,6 +19,8 @@ public class api_call {
 
     }
 
+    //returnResult accepts the input from the Advanced Mode screen, and concatenates them with the http link, which is sent as an http request. Wolfram Alpha receives the request, does the
+    //calculations, and returns the result, which is then saved in responseContent variable, and turned into a String type variable "result"
     public static String returnResult (String input){
         String result = "";
 

@@ -14,10 +14,9 @@ import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.widget.EditText;
 
-
+//Main Class Automatically Generated
 public class MainActivity extends AppCompatActivity {
 
-    api_call wolframCall = new api_call();
 
     private EditText output;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
