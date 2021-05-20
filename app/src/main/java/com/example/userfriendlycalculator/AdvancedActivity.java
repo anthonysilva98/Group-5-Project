@@ -25,7 +25,6 @@ public class AdvancedActivity extends AppCompatActivity {
         output.setShowSoftInputOnFocus(false);
         output.setOnClickListener(new View.OnClickListener() {
             @Override
-            //the onClick function is attached to every button, and then executes whats in the [x]button methods down below
             public void onClick(View v) {
                 if (getString(R.string.answerBox).equals(output.getText().toString())){
                     output.setText("");
@@ -134,11 +133,6 @@ public class AdvancedActivity extends AppCompatActivity {
         result = wolframCall.returnResult(userInput.toString());
         output.setText(result);
         output.setSelection(result.length());
-//       Expression exp = new Expression(userInput);
-//
-//       String result = String.valueOf(exp.calculate());
-//       output.setText(result);
-//       output.setSelection(result.length());
     }
     public void ParenthesisButton(View view){ //adds parantheses to the input field
 
