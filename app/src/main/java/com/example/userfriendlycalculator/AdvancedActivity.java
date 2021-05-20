@@ -12,18 +12,20 @@ import android.widget.EditText;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+//this file launches the advanced calculator and sends the inputs to the api_call to perform the necessary operations
 public class AdvancedActivity extends AppCompatActivity {
     api_call wolframCall = new api_call();
     private EditText output;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { //sets up the advanced calculator, including the UI
         super.onCreate(savedInstanceState);
         setContentView(R.layout.advanced_ui);
         output = findViewById(R.id.outputBox);
         output.setShowSoftInputOnFocus(false);
         output.setOnClickListener(new View.OnClickListener() {
             @Override
+            //the onClick function is attached to every button, and then executes whats in the [x]button methods down below
             public void onClick(View v) {
                 if (getString(R.string.answerBox).equals(output.getText().toString())){
                     output.setText("");
@@ -33,6 +35,7 @@ public class AdvancedActivity extends AppCompatActivity {
     }
 
     private void updateText(String stringToAdd){
+        //adds strings to the input field, the button methods down below call this method to add strings to the input field
         String pastString = output.getText().toString();
         int cursorPosition = output.getSelectionStart();
         String firstHalf = pastString.substring(0, cursorPosition);
@@ -41,6 +44,7 @@ public class AdvancedActivity extends AppCompatActivity {
         output.setSelection(cursorPosition + 1);
 
     }
+    //buttons for the calculator, adds a string to the input field by calling the updateText method
     public void zerobutton(View view){
         updateText("0");
     }
@@ -89,7 +93,7 @@ public class AdvancedActivity extends AppCompatActivity {
     public void exponentbutton(View view){
         updateText("^");
     }
-
+    //complex function buttons
     public void sinbutton(View view){
         updateText("sin");
     }
@@ -112,43 +116,15 @@ public class AdvancedActivity extends AppCompatActivity {
         updateText("ln");
     }
     public void rootbutton(View view){ updateText("root"); }
-    public void backspacebutton(View view){
-        int cursorPosition = output.getSelectionStart();
-        int textLength = output.getText().length();
-        if(cursorPosition != 0 && textLength != 0){
-            SpannableStringBuilder selection = (SpannableStringBuilder) output.getText();
-            selection.replace(cursorPosition - 1, cursorPosition, "");
-            output.setText(selection);
-            output.setSelection(cursorPosition - 1);
-        }
-    }
-    public void plusminusbutton(View view){
-        updateText("-");
-    }
 
-    public void clearbutton(View view){
+    public void clearbutton(View view){ //clears the input field
         output.setText("");
 
     }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public void advancedEqualButton(View view){
+    public void advancedEqualButton(View view){ //sends the result from the input field into api_call.java
         String result = "";
         String userInput = output.getText().toString();
         userInput = userInput.replaceAll("//+", "plus");
@@ -164,7 +140,7 @@ public class AdvancedActivity extends AppCompatActivity {
 //       output.setText(result);
 //       output.setSelection(result.length());
     }
-    public void ParenthesisButton(View view){
+    public void ParenthesisButton(View view){ //adds parantheses to the input field
 
         int cursorPosition = output.getSelectionStart();
         int openParenthesis = 0;
