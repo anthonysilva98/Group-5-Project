@@ -1,4 +1,7 @@
 package com.example.userfriendlycalculator;
+// written by: Candido Ramirez
+// tested by: Candido Ramirez
+// debugged by:Candido, Anthony, Shane
 
 import android.content.Intent;
 import android.os.Bundle;

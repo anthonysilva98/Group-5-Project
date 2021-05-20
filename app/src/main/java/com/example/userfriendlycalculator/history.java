@@ -1,8 +1,12 @@
 package com.example.userfriendlycalculator;
+// written by: Edgar
+// tested by:
+// debugged by:
+
 import android.os.Bundle;
 
 import java.util.*;
-//by Edgar
+
 
 public class history extends MainActivity {
     Stack<String> stack = new Stack<String>();

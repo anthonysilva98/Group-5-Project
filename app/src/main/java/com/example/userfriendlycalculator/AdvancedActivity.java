@@ -1,5 +1,8 @@
 package com.example.userfriendlycalculator;
-//Author:Shane
+// written by: Shane
+// tested by: Shane
+// debugged by:Shane, Anthony, Kristijan
+
 import android.os.Build;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;

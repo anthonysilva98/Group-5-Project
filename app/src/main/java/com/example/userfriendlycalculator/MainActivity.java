@@ -1,5 +1,8 @@
 package com.example.userfriendlycalculator;
-//Author:Anthony
+// written by:Anthony Silva
+// tested by: Anthony Silva
+// debugged by:Anthony, Shane, Kristijan
+
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import org.mariuszgromada.math.mxparser.*;
@@ -33,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+//Output to Display
     private void updateText(String stringToAdd){
         String pastString = output.getText().toString();
         int cursorPosition = output.getSelectionStart();
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         output.setSelection(cursorPosition + 1);
 
     }
+    //Numbers for the Calculator
     public void zerobutton(View view){
                 updateText("0");
                 }

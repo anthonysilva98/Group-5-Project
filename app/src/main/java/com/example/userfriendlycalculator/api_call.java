@@ -1,12 +1,13 @@
 package com.example.userfriendlycalculator;
-
+// written by:Kristijan
+// tested by: Kristijan
+// debugged by:Kristijan, Anthony, Shane
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-//author:Kristijan
 //source: https://www.youtube.com/watch?v=qzRKa8I36Ww
 
 
