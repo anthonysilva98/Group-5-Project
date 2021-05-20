@@ -10,7 +10,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 //source: https://www.youtube.com/watch?v=qzRKa8I36Ww
 
-
+//Enables the connection with external API (Wolfram Alpha)
 public class api_call {
 
 
